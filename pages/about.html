@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Saravgi, Shilpi
+CS545_00
+Assignment #4 (java script)
+Fall 2020
+-->
+
+<head>
+    <title>SDSU Natural History Museum | About</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/main_index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--header starts-->
+        <header class="header">
+            <!--div first starts-->
+            <div class="first">
+                <a href="https://www.sdsu.edu" target="_blank"><img class="fltleft" src="../images/SDSUlogo.png" alt="Click here to go to sdsu website" width="163" height="144" /></a>
+                <h1>San Diego State University <br>Natural History Museum</h1>
+
+            </div>
+            <!--div first ends-->
+
+            <!--website navigation-->
+            <nav id="navContainer" class="clrflt">
+                <ul class="HNav1">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="exhibits.html">Exhibits</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="science.html">Science</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--section layout_two_column starts-->
+        <div class="layout_two_column">
+
+
+
+
+            <article class="col1 sectionBlock itallicStyle">
+                <!--article col1 starts-->
+                <!--<article class=" "> -->
+                <!-- Java Script Changes for last modified date on page . Date formatting done -->
+                <p id="lastModDate">This Page was last modified on:
+                    <script class="textColor">
+                        //document.write(document.lastModified);
+                        var mydate = new Date(document.lastModified);
+                        var month = ["January", "February", "March", "April", "May", "June",
+                            "July", "August", "September", "October", "November", "December"
+                        ][mydate.getMonth()];
+                        var str = ' ' + month + ' ' + mydate.getDate() + ", " + mydate.getFullYear();
+                        if (mydate.getSeconds() < 10) {
+                            Seconds = "0" + mydate.getSeconds();
+                        } else {
+                            Seconds = mydate.getSeconds();
+                        }
+                        if (mydate.getMinutes() < 10) {
+                            Minutes_double_digit = "0" + mydate.getMinutes();
+                        } else {
+                            Minutes_double_digit = mydate.getMinutes();
+                        }
+                        document.write(str);
+                        //var CurTime = " @ " + mydate.getHours() + ":" + mydate.getMinutes() + ":" + Seconds;
+                        var CurTime = " @ " + mydate.getHours() + ":" + Minutes_double_digit + ":" + Seconds;
+                        document.write(CurTime);
+                    </script>
+                </p>
+                <!-- Java Script Changes for last modified end -->
+
+                <h2 class="classBlue">About the museum</h2>
+
+
+                <p>The mission of the SDSU Natural History Museum is to interpret the natural world through research, education and exhibits; to promote understanding of the evolution and diversity of southern California and the peninsula of Baja California;
+                    to train and grow our future leaders in research and conservation; and to inspire in all a respect for nature and the environment.</p>
+
+                <div class="fltrght"><img src="../images/natural-history-museum.jpg" alt="SDSU Natural History Museum" width="270" height="180" /></div>
+
+                <p>Our purpose is to emphasize this unique and diverse region while maintaining a global perspective; to collect and preserve scientific specimens for research and as a continuous record of the changing world for future generations; to serve
+                    as a center for the scientific study of biological diversity and evolution; to provide dynamic leadership in natural history and environmental education through exhibits, publications, and educational programs, striving to make this
+                    outreach relevant to all the people of the San Diego region; to foster cooperative efforts in natural history research and education throughout our region.
+                </p>
+
+                <p>We believe the San Diego State University Natural History Museum will be the premier collections-based environmental education and natural history research resource in our region. We will provide programs that are timely, user-friendly,
+                    and relevant to the real-life needs of the diverse populations of the San Diego-Baja California region today and tomorrow. We will train the researchers that will bring our history into the future.</p>
+
+                <p>Founded in 1954, the San Diego State University Natural History Society was established to document and preserve the rich history and natural resources of the Southern California and the Baja region. In its initial years, the Society supported
+                    the region's scientific culture, serving a small but growing community eager for information about its natural resources. Since its formation society members have established a campus weather station, served as preservation volunteers
+                    for Torrey Pines State Reserve, Batiquitos Lagoon Foundation Nature Center, Anza-Borrego Desert State Park and other nature preserves in the region, and garnered support for the San Diego Zoological Society. The Society's crowning
+                    accomplishment is the creation of the San Diego State University Natural History Museum, the only university affiliated Natural History Museum in the south west.
+                </p>
+
+
+
+
+            </article>
+
+
+
+
+
+            <!--article col1 ends-->
+            <aside class="layout_two_column col2">
+                <!--aside col2 starts-->
+                <section class="sectionBlock">
+                    <h3>Museum Hours</h3>
+                    <p>
+                        Daily<strong> 10:00am to 5:00pm</strong><br> Closed when the campus is closed<br>
+
+                    </p>
+                    <!--div class fcolumn2 ends-->
+
+                    <h3> Museum address</h3>
+
+                    <address>
+            San Diego State University<br>
+            Natural History Museum<br>
+            San Diego, CA 92182-0000<br>
+            (619) 594-5200<br>
+          </address>
+
+                    <!--div class fcolumn2 ends-->
+
+                </section>
+
+            </aside>
+            <!--article col2 ends-->
+
+
+
+        </div>
+        <!--section layout_two_column ends-->
+
+
+
+
+
+        <!--footer starts -->
+        <footer class="footer">
+            <div class="fcolumn1">
+                <address>
+          San Diego State University<br>
+          Natural History Museum<br>
+          San Diego, CA 92182-0000<br>
+          (619) 594-5200<br>
+          <a href="mailto:nhmuseum@sdsu.edu">nhmuseum@sdsu.edu</a>
+        </address>
+            </div>
+            <!--div class fcolumn1 ends-->
+            <div class="fcolumn2 ">
+                <p>
+                    Museum Hours<br> Daily 10:00am to 5:00pm<br> Closed when the campus is closed<br> Hours subject to change<br>
+                </p>
+                <!--div class fcolumn2 ends-->
+            </div>
+        </footer>
+        <!--footer ends-->
+
+    </div>
+
+</body>
+
+</html>

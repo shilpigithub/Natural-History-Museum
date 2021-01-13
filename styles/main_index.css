@@ -1,0 +1,519 @@
+/*
+Saravgi, Shilpi
+CS545_00
+Assignment #4 (Java Script)
+Instructor: Cyndi Chie
+Fall 2020
+*/
+
+* {
+    /* Removing any padding and any margins */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d4f7d4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: #3A4d13;
+    line-height: 1.6;
+    /*recommended */
+}
+
+.wrapper {
+    display: flex;
+    /* Setting flexbox */
+    flex-flow: row wrap;
+}
+
+.wrapper>* {
+    /*all child elements are given flex item properties. */
+    flex: 1 100%;
+}
+
+.header {
+    color: #3A4d13;
+    background-color: #d4f7d4;
+}
+
+ul {
+    /* to adjust bullets with the page */
+    padding-left: .8em;
+}
+
+p,
+ul {
+    margin-bottom: 1.5em;
+}
+
+aside ul {
+    /* displaying links without bullets */
+    list-style-type: none;
+}
+
+
+/*https://www.w3schools.com/css/css_rwd_images.asp */
+
+img {
+    /* making images responsive */
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*setting default links */
+
+a:link {
+    color: #0000e0;
+}
+
+a:visited {
+    color: #5f5fc5;
+}
+
+a:hover {
+    background-color: #e78a38;
+    color: white;
+}
+
+a:active {
+    color: #6f3d11;
+}
+
+
+/******/
+
+div.first {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+div.first a img {
+    background-color: #3A4d13;
+    padding: 0.3em 0.3em;
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+}
+
+div.first a:hover {
+    /* removing hover or normal link from header image */
+    background-color: #d4f7d4;
+}
+
+.main {
+    text-align: left;
+}
+
+.main,
+.aside-1,
+.aside-2 {
+    padding: 1em;
+}
+
+.classBlue {
+    /* class used to highlight text in blue */
+    color: #0000e0;
+}
+
+.itallicStyle {
+    font-style: italic;
+}
+
+.butterflyTable {
+    align-items: center;
+}
+
+
+/**Events Page Butterfly Table **/
+
+.butterflyTable td {
+    padding: 0.5em;
+}
+
+.butterflyTable th {
+    padding: 0.2em;
+    text-align: center;
+}
+
+
+/****/
+
+section .sectionBlock {
+    /* class used to give extra space after block */
+    padding-bottom: 1em;
+}
+
+
+/* setting it relative to 100% font size*/
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h2,
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.4em;
+    margin-top: 0.4em;
+}
+
+h1 {
+    font-size: 250%;
+    font-family: Georgia, Times, "Palatino Linotype", "Times New Roman", serif;
+    text-align: center;
+    width: 100%;
+    line-height: 1.4;
+    margin-left: 0.7em;
+}
+
+
+/* refer for example
+https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_website 
+https://www.linkedin.com/learning/responsive-layout/3-column-layout-with-flexbox */
+
+
+/*** Media Queries for Responsive Design **/
+
+@media all and (max-width:599px) {
+    /* small screen settings */
+    h1 {
+        font-size: 150%;
+    }
+    h2 {
+        font-size: 135%;
+    }
+    h3 {
+        font-size: 120%;
+    }
+    div.wrapper p,
+    ul {
+        font-size: 100%;
+    }
+    #navContainer a {
+        font-size: 1em;
+    }
+    /* .header div.first a img{width:35%;} */
+}
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 0 0;
+        border-right: 1px solid #66380f;
+        border-left: 1px solid #66380f;
+    }
+    h1 {
+        font-size: 200%;
+    }
+    h2 {
+        font-size: 170%;
+    }
+    h3 {
+        font-size: 130%;
+    }
+    div.wrapper p,
+    ul {
+        font-size: 100%;
+    }
+    #navContainer a {
+        font-size: 1.2em;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .main {
+        flex: 3 0px;
+        order: 2;
+    }
+    .aside-1 {
+        order: 1;
+        border-right: 2px solid #66380f;
+    }
+    .aside-2 {
+        order: 3;
+        border-left: 2px solid #66380f;
+    }
+    .footer {
+        order: 4;
+    }
+    h1 {
+        font-size: 250%;
+    }
+    h2 {
+        font-size: 200%;
+    }
+    h3 {
+        font-size: 150%;
+    }
+    div.wrapper p,
+    ul {
+        font-size: 100%;
+    }
+    #navContainer a {
+        font-size: 1.4em;
+    }
+}
+
+@media all and (min-width: 975px) {
+    h1 {
+        font-size: 275%;
+    }
+    #navContainer a {
+        font-size: 1.5em;
+    }
+}
+
+
+/***************************************************/
+
+
+/** Menu Navigation styles **/
+
+#navContainer {
+    background-color: #6f3d11;
+}
+
+#navContainer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    /* using flex layout */
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+#navContainer ul li {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+#navContainer ul li a {
+    display: block;
+    border: 1px solid;
+    padding: .3em .5em;
+    margin: .5em;
+    border-radius: .5em;
+    background-color: #f8e4d3;
+    text-decoration: none;
+    color: #6f3d11;
+}
+
+#navContainer ul li a:hover,
+#navContainer ul li a:active,
+#navContainer ul li a:focus {
+    background-color: #e78a38;
+    color: #fff;
+}
+
+
+/*** Navigatigon end **/
+
+
+/***Floats**/
+
+.fltleft {
+    float: left;
+    margin-right: 0.5em;
+}
+
+.fltrght {
+    float: right;
+    margin-left: 10px;
+}
+
+.clrflt {
+    clear: both;
+}
+
+
+/*** footer **/
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: left;
+    background-color: #6f3d11;
+    color: #f8e4d3;
+    padding: 0.5em 1em;
+}
+
+.fcolumn1,
+.fcolumn2 {
+    padding: 0.5em;
+}
+
+.fcolumn1 {
+    flex: 1;
+}
+
+.footer a:link {
+    color: #f8e4d3;
+    color: #0000e0;
+}
+
+.footer a:visited {
+    color: #e78a38;
+}
+
+.footer a:hover {
+    background-color: #e78a38;
+    color: white;
+}
+
+
+/**layout_two_column  **/
+
+@media(min-width:600px) {
+    .layout_two_column {
+        display: flex;
+    }
+    .layout_two_column .col1 {
+        order: 1;
+        flex: 3;
+    }
+    .layout_two_column .col2 {
+        order: 2;
+        flex: 1;
+    }
+}
+
+.layout_two_column .col2 {
+    border: 2px solid #6f3d11;
+    border-radius: 0.5em;
+}
+
+.layout_two_column .col1,
+.layout_two_column .col2 {
+    padding: 1.5em;
+}
+
+
+/***Three equal columnn layout ***/
+
+
+/* not using now
+@media(min-width:600px){
+.threeEqualColumnLayout{
+  display:flex;
+}
+.threeEqualColumnLayout .col1{order:1; flex:1;}
+.threeEqualColumnLayout .col2{order:2; flex:1;}
+.threeEqualColumnLayout .col3{order:3; flex:1;}
+}
+
+.threeEqualColumnLayout .col1 , .threeEqualColumnLayout .col2 ,.threeEqualColumnLayout .col3{
+  border: 1px solid #6f3d11;
+  border-radius: .5em;;
+
+}*/
+
+
+/********************************************************/
+
+
+/* Assignment 3 additions for php form */
+
+
+/********************************************************/
+
+
+/* Button styles for sign up button in Exhibition page */
+
+.button_signup a {
+    color: white;
+    border: 1px solid #3A4d13;
+    padding: .3em .5em;
+    margin: .5em;
+    border-radius: .5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #e78a38;
+}
+
+.button_signup a:link,
+.button_signup a:visited {
+    color: white;
+}
+
+
+/* Button styles end */
+
+
+/* Form styles */
+
+fieldset {
+    background-color: #eeeeee;
+}
+
+legend {
+    background-color: gray;
+    color: white;
+    padding: .4em 1em;
+    margin-left: 1em;
+}
+
+input,
+textarea,
+select {
+    margin: .7em 1em;
+    padding: .2em;
+}
+
+label {
+    padding-left: 1em;
+}
+
+.disableField {
+    background-color: #eeeeee;
+}
+
+.size {
+    font-size: 150%;
+    padding: .3em;
+}
+
+.required {
+    color: #C41230;
+    font-weight: bolder;
+    font-size: 100%;
+}
+
+.error {
+    color: #C41230;
+}
+
+
+/* php_confirmation styles */
+
+.indented {
+    background-color: #eeeeee;
+}
+
+.confirmation {
+    background-color: #eeeeee;
+    border-radius: .5em;
+    border: 1px solid #3A4d13;
+    padding: .5em 1.5em;
+}
+
+.confirmation ul {
+    padding-left: 2em;
+    margin-bottom: -0.2em;
+    /* to remove extra space after ul for proper formatting */
+}
+
+#lastModDate {
+    color: #6f3d11;
+    font-style: italic;
+    font-size: 100%;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Saravgi, Shilpi
+CS545_00
+Assignment #4 (java script)
+Fall 2020
+-->
+
+<head>
+    <title>SDSU Natural History Museum</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/main_index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--header starts-->
+        <header class="header">
+            <!--div first starts-->
+            <div class="first">
+                <a href="https://www.sdsu.edu" target="_blank"><img class="fltleft" src="images/SDSUlogo.png" alt="Click here to go to sdsu website" width="163" height="144" /></a>
+                <h1>San Diego State University <br>Natural History Museum</h1>
+
+            </div>
+            <!--div first ends-->
+
+            <!--website navigation-->
+            <nav id="navContainer" class="clrflt">
+                <ul class="HNav1">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/exhibits.html">Exhibits</a></li>
+                    <li><a href="pages/events.html">Events</a></li>
+                    <li><a href="pages/science.html">Science</a></li>
+                    <li><a href="pages/join.html">Join</a></li>
+                    <li><a href="pages/about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--article main starts-->
+
+        <article class="main">
+            <!-- Java Script Changes for last modified date on page . Date formatting done -->
+            <p id="lastModDate">This Page was last modified on:
+                <script class="textColor">
+                    //document.write(document.lastModified);
+                    var mydate = new Date(document.lastModified);
+                    var month = ["January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December"
+                    ][mydate.getMonth()];
+                    var str = ' ' + month + ' ' + mydate.getDate() + ", " + mydate.getFullYear();
+                    if (mydate.getSeconds() < 10) {
+                        Seconds = "0" + mydate.getSeconds();
+                    } else {
+                        Seconds = mydate.getSeconds();
+                    }
+                    if (mydate.getMinutes() < 10) {
+                        Minutes_double_digit = "0" + mydate.getMinutes();
+                    } else {
+                        Minutes_double_digit = mydate.getMinutes();
+                    }
+                    document.write(str);
+                    //var CurTime = " @ " + mydate.getHours() + ":" + mydate.getMinutes() + ":" + Seconds;
+                    var CurTime = " @ " + mydate.getHours() + ":" + Minutes_double_digit + ":" + Seconds;
+                    document.write(CurTime);
+                </script>
+            </p>
+            <!-- Java Script Changes for last modified end -->
+
+            <h2 class="classBlue">Our Mission: Nature Belongs to Everyone</h2>
+            <ul>
+                <li>Interpret the natural world through research, education and exhibits.</li>
+                <li>Promote understanding of the evolution and diversity of southern California and the peninsula of Baja California.</li>
+                <li>Learn Science by not just studying , come and have an experience.</li>
+                <li>Train and grow our future leaders in research and conservation</li>
+                <li>Inspire in all a respect for nature and the environment</li>
+            </ul>
+            <h3>Checkout our new additions to museum</h3>
+            <ul>
+                <li>Butterfly Garden</li>
+                <li>Ocean Creatures</li>
+                <li>Skulls</li>
+                <li>Megalodon</li>
+            </ul>
+
+            <h3>Fossil Mysteries<br> Always on view</h3>
+            <div class="fltleft"><img src="images/dinosaurs-skeletons.jpg" alt="Dinosaur skeleton" width="212" height="160" />
+            </div>
+            <p>
+                From dinosaurs to mastodons, travel through 75 million years and dig into the rich fossil history of Southern California and Baja California. The fossils on display were discovered locally by our paleontology team during construction projects.
+            </p>
+
+            <h3>Major attraction Dinosaours</h3>
+            <div class="fltrght">
+                <img src="images/tyrannosaurus-rex.jpg" alt=" Tyrannosaurus" width="212" height="160">
+            </div>
+            <p>Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex, often called T. rex or colloquially T-Rex, is one of the most well-represented of the large theropods. Tyrannosaurus lived throughout what is now
+                western North America, on what was then an island continent known as Laramidia.</p>
+        </article>
+
+        <!--aside aside-1 starts-->
+
+        <aside class="aside aside-1">
+            <h2>Featured Exhibits</h2>
+
+            <h3> Ocean Creatures </h3>
+            <div class="fltleft"> <img src="images/yellow-fish.jpg" alt=" Fish" width="212" height="160">
+            </div>
+
+            <p>Learn about ocean creatures. Checkout on hundred's of ocean creatures and learn about them. Fishes, turtles, crabs, octopus, sharks, walruses and many more. Visit <a href="pages/exhibits.html">Exhibits</a></p>
+
+
+
+
+            <h3>Baja's Wild Side<br> May 15, 2019 through February 22, 2020</h3>
+            <p>
+                Enjoy the breathtaking photography of Dr. Dan Cartamil, a shark expert and marine biologist at the <a href="https://scripps.ucsd.edu/" target="_blank">Scripps Institution of Oceanography</a>, as he explores Baja California's Pacific coast
+                region.
+            </p>
+
+        </aside>
+
+        <!--aside aside-2 starts-->
+
+        <aside class="aside aside-2">
+            <h2>Upcoming Events</h2>
+
+            <h3> Butterfly Garden </h3>
+            <div class="fltleft"> <img src="images/butterfly.jpg" alt="Butterfly" width="212" height="160" /></div>
+
+            <p>Visit our Butterfly Garden and learn about butterflies. To learn about butterflies lifecycle and check images of butterfly visit <a href="pages/events.html">Events</a>.</p>
+
+
+            <h3>Desert Wildlife Walk<br> October 20th, 2019</h3>
+            <div class="fltrght"><img src="images/bighorn-sheep.jpg" alt="Desert Bighorn Sheep" width="212" height="160" />
+            </div>
+
+
+            <p>Walk starts at the Anza-Borrego Desert Center. Meet at 8:00am and return no later than 3:00pm. For reservations call (619) 594-5200.
+            </p>
+        </aside>
+
+        <!--footer starts -->
+        <footer class="footer">
+            <div class="fcolumn1">
+                <address>
+          San Diego State University<br>
+          Natural History Museum<br>
+          San Diego, CA 92182-0000<br>
+          (619) 594-5200<br>
+          <a href="mailto:nhmuseum@sdsu.edu">nhmuseum@sdsu.edu</a>
+        </address>
+            </div>
+            <!--div class fcolumn1 ends-->
+            <div class="fcolumn2 ">
+                <p>
+                    Museum Hours<br> Daily 10:00am to 5:00pm<br> Closed when the campus is closed<br> Hours subject to change<br>
+                </p>
+                <!--div class fcolumn2 ends-->
+            </div>
+        </footer>
+        <!--footer ends-->
+
+    </div>
+
+</body>
+
+</html>

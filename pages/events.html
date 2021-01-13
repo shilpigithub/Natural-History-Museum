@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Saravgi, Shilpi
+CS545_00
+Assignment #4 (java script)
+Fall 2020
+-->
+
+<head>
+    <title>SDSU Natural History Museum | Events</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/main_index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--header starts-->
+        <header class="header">
+            <!--div first starts-->
+            <div class="first">
+                <a href="https://www.sdsu.edu" target="_blank"><img class="fltleft" src="../images/SDSUlogo.png" alt="Click here to go to sdsu website" width="163" height="144" /></a>
+                <h1>San Diego State University <br>Natural History Museum</h1>
+
+            </div>
+            <!--div first ends-->
+
+            <!--website navigation-->
+            <nav id="navContainer" class="clrflt">
+                <ul class="HNav1">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="exhibits.html">Exhibits</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="science.html">Science</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--article main starts-->
+
+        <article class="main">
+            <!-- Java Script Changes for last modified date on page . Date formatting done -->
+            <p id="lastModDate">This Page was last modified on:
+                <script class="textColor">
+                    //document.write(document.lastModified);
+                    var mydate = new Date(document.lastModified);
+                    var month = ["January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December"
+                    ][mydate.getMonth()];
+                    var str = ' ' + month + ' ' + mydate.getDate() + ", " + mydate.getFullYear();
+                    if (mydate.getSeconds() < 10) {
+                        Seconds = "0" + mydate.getSeconds();
+                    } else {
+                        Seconds = mydate.getSeconds();
+                    }
+                    if (mydate.getMinutes() < 10) {
+                        Minutes_double_digit = "0" + mydate.getMinutes();
+                    } else {
+                        Minutes_double_digit = mydate.getMinutes();
+                    }
+                    document.write(str);
+                    //var CurTime = " @ " + mydate.getHours() + ":" + mydate.getMinutes() + ":" + Seconds;
+                    var CurTime = " @ " + mydate.getHours() + ":" + Minutes_double_digit + ":" + Seconds;
+                    document.write(CurTime);
+                </script>
+            </p>
+            <!-- Java Script Changes for last modified end -->
+            <h2 class="classBlue">Butterfly Garden<br> See and Learn about Butterflies</h2>
+            <h3>Facts about butterflies:</h3>
+            <ul>
+                <li>There are about 17,500 species of butterflies in the world, and around 750 species in the United States.
+                </li>
+                <li>Butterfly wings are transparent. Wings are covered by thousands of tiny scales, and these scales reflect light in different colors.</li>
+                <li>Butterflies taste with their wings.</li>
+                <li>Butterflies live on all liquid diet.</li>
+                <li>An adult butter has very short life.</li>
+                <li>The first thing a caterpillar eats after it hatches from its cocoon is usually the shell of the cocoon itself.
+                </li>
+                <li>Butterflies have long tongues that are shaped like tubes that gives them the ability to soak up food instead of sipping it.</li>
+                <li>Many scientists thought butterflies were completely deaf until they first identified butterfly ears in 2012.
+                </li>
+                <li>Monarch butterflies are known for their long migrations, which is when they fly to a different part of the country, or world, when the weather changes.</li>
+            </ul>
+
+            <h2 class="classBlue">Lifecycle of Butterfly</h2>
+
+            <table class="butterflyTable">
+                <tr>
+                    <th colspan="2"> Life stages of Butterfly</th>
+                </tr>
+                <tr>
+                    <td>Eggs</td>
+                    <td><img src="../images/eggs.jpg" alt="Butterfly eggs" width="260" height="150" /></td>
+
+
+                </tr>
+                <tr>
+                    <td>Caterpillar</td>
+                    <td><img src="../images/caterpillar.jpg" alt="Caterpillar" width="260" height="150" /></td>
+
+                </tr>
+                <tr>
+                    <td>Cocoon</td>
+                    <td><img src="../images/cocoon1.jpg" alt="butterfly cocoon" width="260" height="150" /></td>
+                </tr>
+                <tr>
+                    <td>Adult Butterfly</td>
+                    <td><img src="../images/images1.jpg" alt="Butterfly " width="260" height="150" /></td>
+                </tr>
+
+            </table>
+
+            <p>
+                <br>
+                <strong><em>The life cycle of a butterfly</em></strong> is categorized into four stages that are eggs, larva state, pupa and finally an adult butterfly. The butterfly lifecycle has these four stages, and each stage has its own different
+                form, its own importance, and its own goals. When you talk about the caterpillars they are like eating machines, when you talk about the adult butterflies, they have the intentions of reproduction and producing more such new butterflies
+                and also renders a helping hand for the pollination process of flowers. Every stage has its own importance and in a combined form helps in the completion of a butterfly lifecycle. If you are wondering about the time period, that a butterfly
+                takes to complete its whole lifecycle and to transform into an adult then this may vary from species to species. Some butterfly may take an entire year to complete the whole process whereas some may finish it in a short span of just one
+                month.
+            </p>
+        </article>
+
+        <!--aside aside-1 starts-->
+
+        <aside class="aside aside-1">
+            <h2>Wildlife Walk</h2>
+
+            <div class="fltleft">
+                <img src="../images/coyote.jpg" alt=" coyote" width="212" height="160">
+            </div>
+
+            Wildlife traditionally refers to undomesticated animal species, but has come to include all organisms that grow or live wild in an area without being introduced by humans. Wildlife can be found in all ecosystems. Deserts, forests, rainforests, plains,
+            grasslands, and other areas, including the most developed urban areas, all have distinct forms of wildlife.
+
+            <div class="fltleft">
+                <img src="../images/deer.jpg" alt="deer" width="212" height="160">
+            </div>
+            <p>Humans have historically tended to separate civilization from wildlife in a number of ways, including the legal, social, and moral senses. Some animals, however, have adapted to suburban environments.</p>
+        </aside>
+
+        <!--aside aside-2 starts-->
+
+        <aside class="aside aside-2">
+            <h2>Citizen Science</h2>
+            <h3>Get Involved!</h3>
+            <p>How can you have fun while simultaneously contributing to science? By joining the global citizen science movement. The Museum, independent naturalists, and outside organizations have created numerous citizen science projects aimed at helping
+                scientists better understand the species that exists in any given region at any given time. Take part in the projects below to contribute to the exploration and creation of scientific knowledge. At The Museum, everyone is welcome to join
+                in on the fun.
+            </p>
+
+            <section class="sctionBlock">
+                <h3>Shot Hole Borer Citizen Science Project</h3>
+                <h3>Help combat invasive species<br>October - December, 2018</h3>
+                <p>They may be small, but shot hole borer beetles are doing big damage in San Diego. These pests threaten our fragile river woodlands by infesting willows and sycamores, leaving dead, broken trunks in their wake.
+                </p>
+
+            </section>
+
+        </aside>
+
+        <!--footer starts -->
+        <footer class="footer">
+            <div class="fcolumn1">
+                <address>
+          San Diego State University<br>
+          Natural History Museum<br>
+          San Diego, CA 92182-0000<br>
+          (619) 594-5200<br>
+          <a href="mailto:nhmuseum@sdsu.edu">nhmuseum@sdsu.edu</a>
+        </address>
+            </div>
+            <!--div class fcolumn1 ends-->
+            <div class="fcolumn2 ">
+                <p>
+                    Museum Hours<br> Daily 10:00am to 5:00pm<br> Closed when the campus is closed<br> Hours subject to change<br>
+                </p>
+                <!--div class fcolumn2 ends-->
+            </div>
+        </footer>
+        <!--footer ends-->
+
+    </div>
+
+</body>
+
+</html>

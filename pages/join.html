@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Saravgi, Shilpi
+CS545_00
+Assignment #4 (java script)
+Fall 2020
+-->
+
+<head>
+    <title>SDSU Natural History Museum | Join</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/main_index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--header starts-->
+        <header class="header">
+            <!--div first starts-->
+            <div class="first">
+                <a href="https://www.sdsu.edu" target="_blank"><img class="fltleft" src="../images/SDSUlogo.png" alt="Click here to go to sdsu website" width="163" height="144" /></a>
+                <h1>San Diego State University <br>Natural History Museum</h1>
+
+            </div>
+            <!--div first ends-->
+
+            <!--website navigation-->
+            <nav id="navContainer" class="clrflt">
+                <ul class="HNav1">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="exhibits.html">Exhibits</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="science.html">Science</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--section starts-->
+        <article class="main">
+            <!--article main starts-->
+            <!-- Java Script Changes for last modified date on page . Date formatting done -->
+            <p id="lastModDate">This Page was last modified on:
+                <script class="textColor">
+                    //document.write(document.lastModified);
+                    var mydate = new Date(document.lastModified);
+                    var month = ["January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December"
+                    ][mydate.getMonth()];
+                    var str = ' ' + month + ' ' + mydate.getDate() + ", " + mydate.getFullYear();
+                    if (mydate.getSeconds() < 10) {
+                        Seconds = "0" + mydate.getSeconds();
+                    } else {
+                        Seconds = mydate.getSeconds();
+                    }
+                    if (mydate.getMinutes() < 10) {
+                        Minutes_double_digit = "0" + mydate.getMinutes();
+                    } else {
+                        Minutes_double_digit = mydate.getMinutes();
+                    }
+                    document.write(str);
+                    //var CurTime = " @ " + mydate.getHours() + ":" + mydate.getMinutes() + ":" + Seconds;
+                    var CurTime = " @ " + mydate.getHours() + ":" + Minutes_double_digit + ":" + Seconds;
+                    document.write(CurTime);
+                </script>
+            </p>
+            <!-- Java Script Changes for last modified end -->
+            <h2 class="classBlue">Join Us</h2>
+            <section>
+                <h3>Become a Member </h3>
+                <section class="sectionBlock">
+                    <h3>We Believe </h3>
+                    <div class="fltrght"><img src="../images/linked-hands.jpg" alt="Join Us linked hands" width="130" height="120" /></div>
+                    <p>We believe that nature is the biggest exhibition of all, and at the SDSU Natural History Museum, you can explore all that makes this region special.
+                    </p>
+                    <p>
+                        Become a member today for a full year of discovery, and connect with a community of passionate science enthusiasts while enjoying access to outstanding exhibitions and programs. For nearly 145 years, we have been the storytellers of this incredibly diverse
+                        region we call home, and our members have been essential to that story every step of the way.</p>
+                    <p>Join, renew, or give the gift of membership and visit The Museum all year long.
+                    </p>
+
+
+                </section>
+
+                <section class="sectionBlock">
+                    <h3>Benefits</h3>
+
+                    <p>
+                        Become a member and experience something new every time you visit, from docent-led fossil encounters to live animal demonstrations. Members get free general admission, guest passes, invitations to member-exclusive events, and more.
+                    </p>
+                </section>
+
+                <section class="sectionBlock">
+                    <h3>Member Services</h3>
+                    <p>A resource for everything membership-related at The Museum. Find answers to the most frequently asked questions about membership. More.
+                    </p>
+                </section>
+
+                <section class="sectionBlock">
+                    <h3>Member Events</h3>
+                    <p>Membership is more than just free general admission. From exclusive members-only events to exhibition previews and discounts on special programs, members get special access and insight to all of the exciting things happening at The
+                        Museum. More.</p>
+                </section>
+
+
+            </section>
+        </article>
+        <!--article main ends-->
+        <aside class="aside aside-1">
+            <h2>Volunteer & Intern</h2>
+            <h3>Qualification</h3>
+            <p> Please note that you must be at least 18 years old to volunteer in our science departments.
+            </p>
+            <p>To qualify for an internship you must be enrolled in an internship class through your high school or college and receiving course credit for the internship. Minimum age is 16. If you are applying for an internship, please complete the internship
+                application.
+            </p>
+            <p>Please provide adequate detail in the application to insure that we can find a good match for your background and interests. References are required. Please note that volunteer opportunities can be limited and completing an application does
+                not guarantee a volunteer position. Thank you again for your interest.</p>
+        </aside>
+
+        <aside class="aside aside-2">
+            <h2>Donate Now!</h2>
+            <h3>Make a difference</h3>
+            <p>Call <strong>619.594.5200</strong> to give over the phone or to make a gift of stock</p>
+            <p>Mail to: <strong><a href="mailto:nhmuseum@sdsu.edu">nhmuseum@sdsu.edu</a></strong></p>
+
+
+        </aside>
+
+
+
+
+
+
+        <!--footer starts -->
+        <footer class="footer">
+            <div class="fcolumn1">
+                <address>
+          San Diego State University<br>
+          Natural History Museum<br>
+          San Diego, CA 92182-0000<br>
+          (619) 594-5200<br>
+          <a href="mailto:nhmuseum@sdsu.edu">nhmuseum@sdsu.edu</a>
+        </address>
+            </div>
+            <!--div class fcolumn1 ends-->
+            <div class="fcolumn2 ">
+                <p>
+                    Museum Hours<br> Daily 10:00am to 5:00pm<br> Closed when the campus is closed<br> Hours subject to change<br>
+                </p>
+                <!--div class fcolumn2 ends-->
+            </div>
+        </footer>
+        <!--footer ends-->
+
+    </div>
+
+</body>
+
+</html>

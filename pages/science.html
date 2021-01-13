@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Saravgi, Shilpi
+CS545_00
+Assignment #4 (java script)
+Fall 2020
+-->
+
+<head>
+    <title>SDSU Natural History Museum | Science</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/main_index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--header starts-->
+        <header class="header">
+            <!--div first starts-->
+            <div class="first">
+                <a href="https://www.sdsu.edu" target="_blank"><img class="fltleft" src="../images/SDSUlogo.png" alt="Click here to go to sdsu website" width="163" height="144" /></a>
+                <h1>San Diego State University <br>Natural History Museum</h1>
+
+            </div>
+            <!--div first ends-->
+
+            <!--website navigation-->
+            <nav id="navContainer" class="clrflt">
+                <ul class="HNav1">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="exhibits.html">Exhibits</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="science.html">Science</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--div layout_two_column starts-->
+        <div class="layout_two_column">
+
+            <article class="col1">
+                <!-- Java Script Changes for last modified date on page . Date formatting done -->
+                <p id="lastModDate">This Page was last modified on:
+                    <script class="textColor">
+                        //document.write(document.lastModified);
+                        var mydate = new Date(document.lastModified);
+                        var month = ["January", "February", "March", "April", "May", "June",
+                            "July", "August", "September", "October", "November", "December"
+                        ][mydate.getMonth()];
+                        var str = ' ' + month + ' ' + mydate.getDate() + ", " + mydate.getFullYear();
+                        if (mydate.getSeconds() < 10) {
+                            Seconds = "0" + mydate.getSeconds();
+                        } else {
+                            Seconds = mydate.getSeconds();
+                        }
+                        if (mydate.getMinutes() < 10) {
+                            Minutes_double_digit = "0" + mydate.getMinutes();
+                        } else {
+                            Minutes_double_digit = mydate.getMinutes();
+                        }
+                        document.write(str);
+                        //var CurTime = " @ " + mydate.getHours() + ":" + mydate.getMinutes() + ":" + Seconds;
+                        var CurTime = " @ " + mydate.getHours() + ":" + Minutes_double_digit + ":" + Seconds;
+                        document.write(CurTime);
+                    </script>
+                </p>
+                <!-- Java Script Changes for last modified end -->
+                <h2 class="classBlue">Science</h2>
+                <section class="sectionBlock">
+
+                    <h3 id="#brrc">BRCC Mission</h3>
+                    <p>A strategic plan developed by the Biodiversity Research Center of the Californias (BRCC) and adopted by the Museum’s Board of Directors defines the BRCC's mission and region.</p>
+                </section>
+
+                <section class="sectionBlock">
+                    <h3 id="BinationalExped">Binational Expeditions</h3>
+                    <p>The Museum conducts expeditions and other field research along the Baja California peninsula, which is a major portion of our area of emphasis. Museum scientists often work with specialists in different disciplines from various institutions
+                        in the United States and Mexico.</p>
+                </section>
+
+                <section class="sectionBlock">
+                    <h3 id="palen">Paleontological Mitigation Services</h3>
+                    <div class="fltleft">
+                        <img src="../images/dinosaur-bones.jpg" alt=" Dinosaur bones" width="212" height="160">
+                    </div>
+                    <p>PaleoServices is a consulting arm of the Museum specializing in the collection, salvage, preparation, and curation of paleontological resources (fossils) from development-slated acreage. Services also include record searches, paleontological
+                        resource assessment of properties, paleontological mitigation plans, and more.</p>
+                </section>
+
+                <section class="sectionBlock">
+                    <h3 id="minerals">Minerals are big here!</h3>
+                    <div class="fltrght">
+                        <img src="../images/mineral.jpg" alt="mineral rocks" width="212" height="160">
+                    </div>
+                    <p>Picture a mass of hot molten magma spreading below the Earth’s surface. As it cools slowly into solid rock, steam concentrates into trapped pockets that cool slowly over millennia. Geologists know these pockets are where to find amazing
+                        minerals such as tourmaline, topaz, and beryl, as well as common ones like quartz, and mica.</p>
+                </section>
+
+                <section class="sectionBlock">
+                    <h3>San Diego on the move</h3>
+                    <p>The complex geologic history of our region makes San Diego County mineral-rich and its terrain incredibly diverse. Plate tectonics and earthquakes play a big part in that story.</p>
+                </section>
+
+
+                <section class="sectionBlock">
+                    <h3 id="newsletter">Newsletter</h3>
+                    <p>Receive the latest information about our new exhibitions, programs, events, and more.</p>
+
+                </section>
+
+            </article>
+
+            <aside class="col2">
+                <br>
+
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#brrc">BRRC Mission</a></li>
+                    <li><a href="#BinationalExped">Binational Expditions</a></li>
+                    <li><a href="#palen">Paleontological Mitigation Services</a></li>
+                    <li><a href="#minerals">Minerals</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                </ul>
+
+            </aside>
+
+        </div>
+        <!--div layout_two_column ends-->
+
+        <!--footer starts -->
+        <footer class="footer">
+            <div class="fcolumn1">
+                <address>
+          San Diego State University<br>
+          Natural History Museum<br>
+          San Diego, CA 92182-0000<br>
+          (619) 594-5200<br>
+          <a href="mailto:nhmuseum@sdsu.edu">nhmuseum@sdsu.edu</a>
+        </address>
+            </div>
+            <!--div class fcolumn1 ends-->
+            <div class="fcolumn2 ">
+                <p>
+                    Museum Hours<br> Daily 10:00am to 5:00pm<br> Closed when the campus is closed<br> Hours subject to change<br>
+                </p>
+                <!--div class fcolumn2 ends-->
+            </div>
+        </footer>
+        <!--footer ends-->
+
+    </div>
+
+</body>
+
+</html>

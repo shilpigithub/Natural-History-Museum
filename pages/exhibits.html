@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Saravgi, Shilpi
+CS545_00
+Assignment #4 (java script)
+Fall 2020
+-->
+
+<head>
+    <title>SDSU Natural History Museum | Exhibition</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../styles/main_index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--header starts-->
+        <header class="header">
+            <!--div first starts-->
+            <div class="first">
+                <a href="https://www.sdsu.edu" target="_blank"><img class="fltleft" src="../images/SDSUlogo.png" alt="Click here to go to sdsu website" width="163" height="144" /></a>
+                <h1>San Diego State University <br>Natural History Museum</h1>
+
+            </div>
+            <!--div first ends-->
+
+            <!--website navigation-->
+            <nav id="navContainer" class="clrflt">
+                <ul class="HNav1">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="exhibits.html">Exhibits</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="science.html">Science</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--article main starts-->
+
+        <article class="main">
+
+            <!-- Java Script Changes for last modified date on page . Date formatting done -->
+            <p id="lastModDate">This Page was last modified on:
+                <script class="textColor">
+                    //document.write(document.lastModified);
+                    var mydate = new Date(document.lastModified);
+                    var month = ["January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December"
+                    ][mydate.getMonth()];
+                    var str = ' ' + month + ' ' + mydate.getDate() + ", " + mydate.getFullYear();
+                    if (mydate.getSeconds() < 10) {
+                        Seconds = "0" + mydate.getSeconds();
+                    } else {
+                        Seconds = mydate.getSeconds();
+                    }
+                    if (mydate.getMinutes() < 10) {
+                        Minutes_double_digit = "0" + mydate.getMinutes();
+                    } else {
+                        Minutes_double_digit = mydate.getMinutes();
+                    }
+                    document.write(str);
+                    //var CurTime = " @ " + mydate.getHours() + ":" + mydate.getMinutes() + ":" + Seconds;
+                    var CurTime = " @ " + mydate.getHours() + ":" + Minutes_double_digit + ":" + Seconds;
+                    document.write(CurTime);
+                </script>
+            </p>
+            <!-- Java Script Changes for last modified end -->
+            <h2 class="classBlue">Exhibitions</h2>
+
+            <p class="classBlue"> Signup here for events and exhitbitions at SDSU NHM <br>
+                <span class="button_signup"><a href="signup_form.php" >Signup </a></span>
+            </p>
+
+            <section class="sectionBlock">
+                <h3 id="minerals">Hidden Gems Coming soon</h3>
+                <p><strong>Opening December 10, 2020</strong><br>This December, get to know the museum's sparkly side. More than 100 stunning objects from our mineralogy department will be displayed on every level of the Museum in this "deconstructed," vertically
+                    aligned exhibition. Many found and mined in San Diego County.</p>
+            </section>
+
+            <section class="sectionBlock">
+                <h3 id="storage">Unshelved: Cool Stuff from Storage</h3>
+                <p><strong>Always on view<br></strong>The museum has many fascinating specimens in storage that have never been on display—until now. Don't miss this rare backstage glimpse of the Museum's storage areas.
+                </p>
+            </section>
+
+            <section class="sectionBlock">
+                <h3 id="baja">Baja's Wild Side</h3>
+                <p><strong>May 15, 2017 through February 22, 2019<br></strong>Enjoy the breathtaking photography of Dr. Dan Cartamil, a shark expert and marine biologist at the Scripps Institution of Oceanography, as he explores Baja California's Pacific
+                    coast region</p>
+            </section>
+
+            <section class="sectionBlock">
+                <h3 id="cerutti">The Cerutti Mastodon Discovery<br></h3>
+                <p><strong>April 26, 2018 through December 31, 2019<br></strong>An Ice Age site excavated by Museum staff preserves 130,000-year-old mastodon bones, molars, and tusks that show evidence of modification by early humans, dramatically revising
+                    the timeline for when humans first reached the Americas.</p>
+
+            </section>
+
+            <section class="sectionBlock">
+                <h3 id="ocean"> Ocean Creatures </h3>
+
+                <p><strong>Always on view<br></strong>Learn about ocean creatures. Checkout on hundred's of ocean creatures and learn about them. Fishes, turtles, crabs, octopus, sharks, walruses and many more. To learn more about sea creatures visit
+                    <a href="https://www.oceana.org/marine-life" target="_blank">Marine Life</a>
+                </p>
+
+
+            </section>
+
+            <section class="sectionBlock">
+                <h3 id="skull">Skull </h3>
+                <p><strong>Always on view<br></strong>Take a look at 200 of the weirdest, wildest, and most fascinating animal skulls from our research collection. Mammals, birds, reptiles, and amphibians are on display, showcasing an eye-popping array of
+                    horns, beaks, bills, teeth, and more.
+                </p>
+            </section>
+
+        </article>
+
+        <!--aside aside-1 starts-->
+
+        <aside class="aside aside-1">
+            <br>
+            <ul>
+                <li><a href="#minerals">Minerals</a></li>
+                <li><a href="#storage">Storage Areas</a></li>
+                <li><a href="#baja">Baja Wild Life</a></li>
+                <li><a href="#cerutti">Cerrutti Mastaodon</a></li>
+                <li><a href="#ocean">Ocean Creatures</a></li>
+
+            </ul>
+
+        </aside>
+
+        <!--aside aside-2 starts-->
+
+        <aside class="aside aside-2">
+
+            <h3>Exhitbition Images</h3>
+            <div>
+                <img src="../images/rocks-and-minerals.jpg" alt=" rocks and minerals" width="212" height="160">
+            </div>
+            <div>
+                <img src="../images/shark.jpg" alt=" shark" width="212" height="160">
+            </div>
+            <div>
+                <img src="../images/sharks.jpg" alt=" sharks" width="212" height="160">
+            </div>
+            <div>
+                <img src="../images/buffalo-skull.jpg" alt=" buffalo skull" width="212" height="160">
+            </div>
+
+
+        </aside>
+
+        <!--footer starts -->
+        <footer class="footer">
+            <div class="fcolumn1">
+                <address>
+          San Diego State University<br>
+          Natural History Museum<br>
+          San Diego, CA 92182-0000<br>
+          (619) 594-5200<br>
+          <a href="mailto:nhmuseum@sdsu.edu">nhmuseum@sdsu.edu</a>
+        </address>
+            </div>
+            <!--div class fcolumn1 ends-->
+            <div class="fcolumn2 ">
+                <p>
+                    Museum Hours<br> Daily 10:00am to 5:00pm<br> Closed when the campus is closed<br> Hours subject to change<br>
+                </p>
+                <!--div class fcolumn2 ends-->
+            </div>
+        </footer>
+        <!--footer ends-->
+
+    </div>
+
+</body>
+
+</html>

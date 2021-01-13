@@ -1,0 +1,21 @@
+for home page:
+https://edoras.sdsu.edu/~cssc3127/assignment4/index.html
+
+for link to php form
+https://edoras.sdsu.edu/~cssc3127/assignment4/pages/exhibits.html
+
+______________________________________
+
+1. Javascipt for last modified date and time is included in all pages in the body just below navigation in main column i.e. in center top in 3col-layout. In 2col-layout in bigger column.
+
+2. Javascript is also added in signup_form.php. Here function for capitalizing first alphabet in words in name(first alphabet of each word is capitalized) and rest alpabets to lowercase. Also finding hypen '-' in name and capitalizing follwowing alphabet.
+
+3. Javascript function for calculating total attendees onchange in any of subcategories.
+
+4. (using oninput)javascript is also used to allow only numbers to be input in the number field of attendees.
+
+5. (using oninput)javascript is also used in name field to prevent inputting other chars.
+
+6. javascript is also used to change the format of date displayin as day month, year. In seconds 0 is added if seconds are less than 10 in minutes 0 is added as first digit if minutes is less than 10.
+
+
